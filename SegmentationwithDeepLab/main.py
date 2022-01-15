@@ -24,11 +24,11 @@ def get_argparser():
     parser = argparse.ArgumentParser()
 
     # Datset Options
-    parser.add_argument("--data_root", type=str, default='/hdfs/bigred3ns/user/SVMLP17/hive/datasets',
+    parser.add_argument("--data_root", type=str, default='trainingdata',
                         help="path to Dataset")
     parser.add_argument("--dataset", type=str, default='voc',
                         choices=['voc', 'cityscapes'], help='Name of dataset')
-    parser.add_argument("--checkpoints", type=str, default='/markov/markov_model',
+    parser.add_argument("--checkpoints", type=str, default='/checkpoint/model',
                         choices=['voc', 'cityscapes'], help='Name of dataset')
     
     parser.add_argument("--num_classes", type=int, default=None,
